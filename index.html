@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumina Bliss | Beauty & Elegance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #f3b5c4;
+      --dark: #222;
+      --light: #fafafa;
+      --text: #555;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: var(--light);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    header h1 {
+      font-weight: 600;
+      color: #fff;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+      background: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      filter: brightness(75%) saturate(115%);
+      animation: bgZoom 22s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+    @keyframes bgZoom {
+      0% { transform: scale(1) translate(0, 0); }
+      50% { transform: scale(1.15) translate(-10px, -15px); }
+      100% { transform: scale(1.1) translate(10px, 10px); }
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.6));
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 0 1rem;
+    }
+    .hero-content h2 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.15rem;
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.6;
+    }
+    .btn {
+      padding: 0.8rem 1.8rem;
+      background-color: var(--primary);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background-color: #f08ea8;
+      transform: scale(1.05);
+    }
+
+    /* PRODUCTS */
+    .products {
+      padding: 4rem 8%;
+      background-color: #fff;
+    }
+    .products h3 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: var(--light);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h4 {
+      color: var(--dark);
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1rem;
+    }
+    .card p {
+      color: var(--text);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: var(--light);
+      color: var(--text);
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+    }
+    .social-links a {
+      margin: 0 0.5rem;
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .social-links a:hover {
+      color: var(--primary);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        background: rgba(0,0,0,0.4);
+      }
+      nav {
+        margin-top: 0.5rem;
+      }
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1rem;
+      }
+      .products {
+        padding: 2rem 5%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lumina Bliss</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Unveil Your Beauty</h2>
+      <p>Luxury makeup & timeless elegance — crafted to make every woman shine.</p>
+      <button class="btn">Coming Soon</button>
+    </div>
+  </section>
+
+  <section class="products" id="products">
+    <h3>Our Products</h3>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Perfume">
+        <h4>Rose Perfume</h4>
+        <p>$39.99</p>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3562650/pexels-photo-3562650.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Makeup Set">
+        <h4>Makeup Set</h4>
+        <p>$59.99</p>
+        <button class="btn">Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1576750/pexels-photo-1576750.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Handbag">
+        <h4>Classic Handbag</h4>
+        <p>$79.99</p>
+        <button class="btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="social-links">
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
+      <a href="https://www.tiktok.com/" target="_blank">TikTok</a> |
+      <a href="https://www.pinterest.com/" target="_blank">Pinterest</a>
+    </div>
+    <p>© 2025 Lumina Bliss. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
