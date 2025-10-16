@@ -73,8 +73,8 @@
       left: 0;
       width: 110%;
       height: 110%;
-      background: url('https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-      filter: brightness(75%) saturate(115%);
+      background: url('https://m.media-amazon.com/images/I/71hY4dm1T7L._SX679_.jpg') center/cover no-repeat;
+      filter: brightness(70%) saturate(115%);
       animation: bgZoom 22s ease-in-out infinite alternate;
       z-index: 1;
     }
@@ -118,6 +118,8 @@
       cursor: pointer;
       font-size: 1rem;
       transition: 0.3s, transform 0.3s;
+      display: inline-block;
+      text-decoration: none;
     }
     .btn:hover {
       background-color: #f08ea8;
@@ -139,6 +141,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 1.5rem;
+      justify-items: center;
     }
     .card {
       background-color: var(--light);
@@ -147,13 +150,14 @@
       overflow: hidden;
       text-align: center;
       transition: transform 0.3s;
+      max-width: 280px;
     }
     .card:hover {
       transform: translateY(-5px);
     }
     .card img {
       width: 100%;
-      height: 220px;
+      height: 250px;
       object-fit: cover;
     }
     .card h4 {
@@ -221,31 +225,20 @@
   <section class="hero">
     <div class="hero-content">
       <h2>Unveil Your Beauty</h2>
-      <p>Luxury makeup & timeless elegance — crafted to make every woman shine.</p>
-      <button class="btn">Coming Soon</button>
+      <p>Luxury skincare — experience the glow of elegance.</p>
+      <a href="#products" class="btn">Discover Now</a>
     </div>
   </section>
 
   <section class="products" id="products">
-    <h3>Our Products</h3>
+    <h3>Our Product</h3>
     <div class="product-grid">
+      <!-- المنتج الوحيد -->
       <div class="card">
-        <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Perfume">
-        <h4>Rose Perfume</h4>
-        <p>$39.99</p>
-        <button class="btn">Buy Now</button>
-      </div>
-      <div class="card">
-        <img src="https://images.pexels.com/photos/3562650/pexels-photo-3562650.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Makeup Set">
-        <h4>Makeup Set</h4>
-        <p>$59.99</p>
-        <button class="btn">Buy Now</button>
-      </div>
-      <div class="card">
-        <img src="https://images.pexels.com/photos/1576750/pexels-photo-1576750.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Handbag">
-        <h4>Classic Handbag</h4>
-        <p>$79.99</p>
-        <button class="btn">Buy Now</button>
+        <img src="https://m.media-amazon.com/images/I/611FUTyHdCL._SX679_.jpg" alt="Medicube Collagen Cream">
+        <h4>Medicube Salmon DNA PDRN Pink Collagen Capsule Cream</h4>
+        <p>$19.90 <span style="text-decoration: line-through; color:#888;">$21.90</span></p>
+        <a href="https://amzn.to/4hbzdwK/" target="_blank" class="btn">اشتري الآن</a>
       </div>
     </div>
   </section>
